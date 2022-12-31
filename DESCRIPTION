@@ -1,0 +1,34 @@
+Package: LearningStats
+Type: Package
+Title: Elemental Descriptive and Inferential Statistics
+Version: 0.1.0
+Authors@R: c(
+    person("María Isabel", "Borrajo-García", role = c("aut", "cre"),
+	       email = "mariaisabel.borrajo@usc.es"),
+    person("Mercedes", "Conde-Amboage", role = "aut",
+	       email = "mercedes.amboage@usc.es"),
+	person("Alejandra", "López-Pérez", role = "aut",
+	       email = "alejandralopez.perez@usc.es")
+	)
+Description: Provides elemental Statistics and Probability functions aimed 
+	to teach students the main concepts of Descriptive and Inferential Statistics. 
+	The main topics covered are Descriptive Statistics, Probability models 
+	(discrete and continuous variables) and Statistical Inference (confidence 
+	intervals and hypothesis testing).
+Language: en-GB
+License: GPL-2
+Encoding: UTF-8
+Depends: R (>= 3.5.0)
+LazyData: true
+RoxygenNote: 7.1.1
+Roxygen: list(old_usage = TRUE)
+Imports:
+    stats,
+	grDevices,
+	graphics,
+	utils,
+    tools,
+    data.table,
+    readxl,
+    haven,
+	readODS
