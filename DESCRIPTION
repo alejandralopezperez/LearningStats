@@ -20,15 +20,15 @@ License: GPL-2
 Encoding: UTF-8
 Depends: R (>= 3.5.0)
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.1
 Roxygen: list(old_usage = TRUE)
 Imports:
     stats,
-	grDevices,
-	graphics,
-	utils,
+    grDevices,
+    graphics,
+    utils,
     tools,
     data.table,
     readxl,
     haven,
-	readODS
+    readODS
