@@ -30,6 +30,9 @@ plotReg(x, y, main = "Linear Regression Model",
 
 \item{legend}{logical value; if TRUE (default), a legend with details about fitted model is included.}
 }
+\value{
+This function is called for the side effect of drawing the plot.
+}
 \description{
 Representation of a Linear Regression Model
 }

@@ -9,6 +9,9 @@ sample.var(x)
 \arguments{
 \item{x}{a numeric vector containing the sample.}
 }
+\value{
+A single numerical value corresponding with the sample variance.
+}
 \description{
 \code{sample.var} computes the sample variance of a sample \code{x}.
 }

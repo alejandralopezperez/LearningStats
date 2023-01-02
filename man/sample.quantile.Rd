@@ -13,6 +13,8 @@ sample.quantile(x, tau)
 }
 \value{
 A number or a numeric vector of \code{tau}-quantile(s).
+
+A numerical value or vector corresponding with the requested sample quantiles.
 }
 \description{
 \code{sample.quantile} computes a estimation of different quantiles, given a sample {x}, using order statistics.

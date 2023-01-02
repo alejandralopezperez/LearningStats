@@ -11,6 +11,9 @@ Smu(x, mu)
 
 \item{mu}{the population mean.}
 }
+\value{
+A single numerical value corresponding with the standard deviation estimation when the population mean is known.
+}
 \description{
 \code{Smu} computes a estimation of the standard deviation, given a sample \code{x} with known mean (denoted by \code{mu}).
 }

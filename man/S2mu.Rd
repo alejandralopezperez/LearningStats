@@ -11,6 +11,9 @@ S2mu(x, mu)
 
 \item{mu}{the population mean.}
 }
+\value{
+A single numerical value corresponding with the variance estimation when the population mean is known.
+}
 \description{
 \code{S2mu} computes a estimation of the variance, given a sample {x} with known population mean (denoted by \code{mu}).
 }

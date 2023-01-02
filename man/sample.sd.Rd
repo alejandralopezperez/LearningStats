@@ -9,6 +9,9 @@ sample.sd(x)
 \arguments{
 \item{x}{a numeric vector containing the sample.}
 }
+\value{
+A single numerical value corresponding with the sample standard deviation.
+}
 \description{
 \code{sample.sd} computes the sample standard deviation of a sample \code{x}.
 }
