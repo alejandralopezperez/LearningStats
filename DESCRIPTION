@@ -37,6 +37,7 @@ Encoding: UTF-8
 Depends: R (>= 3.5.0)
 LazyData: true
 RoxygenNote: 7.2.1
+Roxygen: list(old_usage = TRUE)
 Imports: stats, 
   grDevices, 
   graphics, 
