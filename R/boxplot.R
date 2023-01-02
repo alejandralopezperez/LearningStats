@@ -13,6 +13,8 @@
 #'
 #' @details The quantiles needed to obtain this representation are computed using the function \code{sample.quantile}.
 #'
+#' @return This function is called for the side effect of drawing the plot.
+#'
 #' @examples
 #' x=c(5,-5,rnorm(40))
 #' BoxPlot(x,col="pink")

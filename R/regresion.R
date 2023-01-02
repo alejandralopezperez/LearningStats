@@ -13,6 +13,8 @@
 #'
 #' @export
 #'
+#' @return This function is called for the side effect of drawing the plot.
+#'
 #' @examples
 #' x=rnorm(100)
 #' error=rnorm(100)

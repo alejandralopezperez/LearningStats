@@ -21,6 +21,9 @@
 #' plotDUnif(x)
 
 plotDUnif<-function(x,type="b",col="grey"){
+  oldpar <- par(no.readonly = TRUE); on.exit(par(oldpar))
+  old <- options() ; on.exit(options(old))
+
   options(scipen=999)
   if(!is.numeric(x)|!is.vector(x)|any(!is.finite(x))) stop("The support of the discrete variable must be numeric vector")
   if(sum(is.na(x))!=0){x=x[-which(is.na(x))]; print("Missing values have been removed from 'x'")}
@@ -45,7 +48,6 @@ plotDUnif<-function(x,type="b",col="grey"){
     segments(c(-1,x),c(0,Fx),c(0,x[2:n],max(x)+1),c(0,Fx),lwd=2)
     axis(1,at=x,labels=x,las=1)
     abline(h=c(0,1),lty=2,col="grey")
-	par(mfrow=c(1,1))
   }else if(type=="d"){
     plot(c(-1,x),c(0,Fx),type="s",lty=2,lwd=2,ylab="F(x)",xlab="x",main="Distribution Function",xaxt="n")
     points(x,Fx,pch=19,cex=1.2)

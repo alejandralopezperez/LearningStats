@@ -21,6 +21,9 @@
 #' plotPois(lambda)
 
 plotPois<-function(lambda,type="b",col="grey"){
+  oldpar <- par(no.readonly = TRUE); on.exit(par(oldpar))
+  old <- options() ; on.exit(options(old))
+
   options(scipen=999)
   if(!is.numeric(lambda)|any(!is.finite(lambda))) stop("The parameter 'lambda' must be a positive number")
   if(!is.vector(lambda)|length(lambda)!=1) stop("The parameter 'lambda' must be a positive number")
@@ -43,7 +46,6 @@ plotPois<-function(lambda,type="b",col="grey"){
     segments(c(-1,x),c(0,Fx),c(0,x[2:length(x)],max(x)+1),c(0,Fx),lwd=2)
     axis(1,at=x,labels=x,las=1)
     abline(h=c(0,1),lty=2,col="grey")
-	par(mfrow=c(1,1))
   }else if(type=="d"){
     plot(c(-1,x),c(0,Fx),type="s",lty=2,lwd=2,ylab="F(x)",xlab="x",main="Distribution Function",xaxt="n")
     points(x,Fx,pch=19,cex=1.2)

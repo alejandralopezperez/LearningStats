@@ -43,6 +43,8 @@ Histogram<-function(x, freq=FALSE, col.fill="grey", main="autom", xlab="", ylab=
   if(length(col.fill)!=1) stop("The argument 'col.fill' must be a single colour")
   if(col.fill%in%c(NA,NaN,Inf,-Inf)) stop("The argument 'col.fill' must be a single colour")
 
+  old <- options() ; on.exit(options(old))
+
   n=length(x)
   ran=max(x)-min(x)
   n_int=round(sqrt(n),0)
@@ -61,9 +63,7 @@ Histogram<-function(x, freq=FALSE, col.fill="grey", main="autom", xlab="", ylab=
   if(freq==TRUE){ #with absolute frequencies
     if(main=="autom"){main="Histogram"}
     if(ylab=="autoy"){ylab="Frequency"}
-    options(warn=-1)
-    hist(x,breaks=breaks,ylab=ylab,xlab=xlab, main=main, col=col.fill, axes=FALSE, freq=freq)
-    options(warn=0)
+    suppressWarnings(hist(x,breaks=breaks,ylab=ylab,xlab=xlab, main=main, col=col.fill, axes=FALSE, freq=freq))
     rug(x)
     axis(1,at=round(breaks,2))
     axis(2,at=0:max(ni))

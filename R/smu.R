@@ -10,6 +10,8 @@
 #'
 #' @export
 #'
+#' @return A single numerical value corresponding with the standard deviation estimation when the population mean is known.
+#'
 #' @examples
 #' x=rnorm(20)
 #' Smu(x,mu=0)

@@ -11,6 +11,8 @@
 #'
 #' @export
 #'
+#' @return A single numerical value corresponding with the variance estimation when the population mean is known.
+#'
 #' @examples
 #' x=rnorm(20)
 #' S2mu(x,mu=0)

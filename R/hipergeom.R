@@ -23,6 +23,9 @@
 #' plotHyper(N,n,k)
 
 plotHyper<-function(N,n,k,type="b",col="grey"){
+  oldpar <- par(no.readonly = TRUE); on.exit(par(oldpar))
+  old <- options() ; on.exit(options(old))
+
   options(scipen=999)
   if(!is.numeric(N)|!is.vector(N)|any(!is.finite(N))) stop("The parameter 'N' must be a positive integer")
   if(!is.numeric(n)|!is.vector(n)|any(!is.finite(n))) stop("The parameter 'n' must be a positive integer")
@@ -53,7 +56,6 @@ plotHyper<-function(N,n,k,type="b",col="grey"){
     segments(c(-1,x),c(0,Fx),c(0,x[2:length(x)],max(x)+1),c(0,Fx),lwd=2)
     axis(1,at=x,labels=x,las=1)
     abline(h=c(0,1),lty=2,col="grey")
-	par(mfrow=c(1,1))
   }else if(type=="d"){
     plot(c(-1,x),c(0,Fx),type="s",lty=2,lwd=2,ylab="F(x)",xlab="x",main="Distribution Function",xaxt="n")
     points(x,Fx,pch=19,cex=1.2)

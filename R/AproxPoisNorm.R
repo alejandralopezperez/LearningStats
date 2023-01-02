@@ -14,6 +14,8 @@
 #'
 #' @details The approximation is accurate only if lambda>=10.
 #'
+#' @return This function is called for the side effect of drawing the plot.
+#'
 #' @examples
 #' lambda=15
 #' AproxPoisNorm(lambda)

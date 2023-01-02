@@ -21,6 +21,7 @@
 #'
 #' - p in [0.9,1] and n(1-p)>5.
 #'
+#' @return This function is called for the side effect of drawing the plot.
 #'
 #' @examples
 #' n=45; p=0.4

@@ -18,6 +18,7 @@
 #' If there is a point in the sample with a cumulative relative frequency equal to \code{tau},
 #' then the sample quantile will be calculated as the mean between that point and the next one of the ordered sample.
 #'
+#' @return A numerical value or vector corresponding with the requested sample quantiles.
 #'
 #' @examples
 #' x=rnorm(20)

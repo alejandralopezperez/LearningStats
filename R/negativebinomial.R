@@ -24,6 +24,9 @@
 #' plotNegBinom(n,p)
 
 plotNegBinom<-function(n,p,type="b",col="grey"){
+  oldpar <- par(no.readonly = TRUE); on.exit(par(oldpar))
+  old <- options() ; on.exit(options(old))
+
   options(scipen=999)
   if(!is.numeric(p)|!is.vector(p)|any(!is.finite(p))) stop("The parameter 'p' must be a single number between 0 and 1")
   if(length(p)!=1) stop("The parameter 'p' must be a single number between 0 and 1")
@@ -50,7 +53,6 @@ plotNegBinom<-function(n,p,type="b",col="grey"){
     segments(c(-1,x),c(0,Fx),c(0,x[2:length(x)],max(x)+1),c(0,Fx),lwd=2)
     axis(1,at=x,labels=x,las=1)
     abline(h=c(0,1),lty=2,col="grey")
-	par(mfrow=c(1,1))
   }else if(type=="d"){
     plot(c(-1,x),c(0,Fx),type="s",lty=2,lwd=2,ylab="F(x)",xlab="x",main="Distribution Function",xaxt="n")
     points(x,Fx,pch=19,cex=1.2)

@@ -13,6 +13,8 @@
 #'
 #' @export
 #'
+#' @return This function is called for the side effect of drawing the plot.
+#'
 #' @examples
 #' lambda=0.5;shape=4
 #' plotGamma(lambda,shape)
@@ -32,6 +34,8 @@ plotGamma<-function(lambda,shape,type="b",col="black"){
   if(length(col)!=1) stop("The argument 'col' must be a single colour")
   if(col%in%c(NA,NaN,Inf,-Inf)) stop("The argument 'col' must be a single colour")
 
+  oldpar <- par(no.readonly = TRUE); on.exit(par(oldpar))
+
 	x=seq(0,qgamma(0.999,shape=shape,rate=lambda),by=0.01)
 	fx=dgamma(x,shape=shape,rate=lambda)
 	Fx=pgamma(x,shape=shape,rate=lambda)
@@ -41,7 +45,7 @@ plotGamma<-function(lambda,shape,type="b",col="black"){
 		par(mfrow=c(1,3))
 		plot(x,fx,type="l",main="Density Function",ylab="f(x)",lwd=2,col=col)
 		segments(-max(x)/10,0,0,0,col=col,lwd=2)
-        if(fx[1]!=0){segments(0,0,0,fx[1],col=col,lwd=2,lty=2)}
+    if(fx[1]!=0){segments(0,0,0,fx[1],col=col,lwd=2,lty=2)}
 
 		plot(x,Fx,type="l",main="Distribution Function",ylab="F(x)",lwd=2,col=col)
 		segments(-max(x)/10,0,0,0,col=col,lwd=2)
@@ -49,7 +53,6 @@ plotGamma<-function(lambda,shape,type="b",col="black"){
 
 		plot(seq(0,1,by=0.01),Finvx,type="l",xlab=expression(tau),ylab="", main="Quantile Function",lwd=2,col=col)
 		title(ylab=expression(paste("F"^"-1",(tau),sep="")), line=2.5, cex.lab=1)
-		par(mfrow=c(1,1))
 	}else if(type=="dis"){
 		plot(x,Fx,type="l",main="Distribution Function",ylab="f(x)",lwd=2,col=col)
 		abline(h=c(0,1),lty=2,col="gray")

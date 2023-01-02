@@ -9,6 +9,8 @@
 #'
 #' @export
 #'
+#' @return A single numerical value corresponding with the sample standard deviation.
+#'
 #' @examples
 #' x=rnorm(20)
 #' sample.sd(x)

@@ -4,10 +4,13 @@
 
 #' @param x a numeric vector containing the sample.
 #'
-#'@details Given \eqn{\{x_1,\ldots,x_n\}} a sample of a random variable, the sample variance
+#' @details Given \eqn{\{x_1,\ldots,x_n\}} a sample of a random variable, the sample variance
 #' can be computed as \eqn{S^2=\frac{1}{n}\sum_{i=1}^n (x_i-\bar{x})^2}.
 #'
 #' @export
+#'
+#' @return A single numerical value corresponding with the sample variance.
+#'
 #'
 #' @examples
 #' x=rnorm(20)

@@ -24,6 +24,7 @@
 #' with parameter \code{lambda=n(1-p)} and this Poisson distribution can be used in order to approximate the mass
 #' probability function associated with X1.
 #'
+#' @return This function is called for the side effect of drawing the plot.
 #'
 #' @examples
 #' n=50;p=0.93

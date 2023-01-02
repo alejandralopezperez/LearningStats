@@ -14,6 +14,8 @@
 #'
 #' @export
 #'
+#' @return This function is called for the side effect of drawing the plot.
+#'
 #' @examples
 #' mu=10; sigma=5
 #' plotNorm(mu,sigma)
@@ -32,6 +34,8 @@ plotNorm<-function(mu,sigma,type="b",col="black"){
   if(length(col)!=1) stop("The argument 'col' must be a single colour")
   if(col%in%c(NA,NaN,Inf,-Inf)) stop("The argument 'col' must be a single colour")
 
+  oldpar <- par(no.readonly = TRUE); on.exit(par(oldpar))
+
 	x=seq(-3*sigma+mu,3*sigma+mu,by=0.01)
 	fx=dnorm(x,mean=mu,sd=sigma)
 	Fx=pnorm(x,mean=mu,sd=sigma)
@@ -47,7 +51,6 @@ plotNorm<-function(mu,sigma,type="b",col="black"){
 
 		plot(seq(0,1,by=0.01),Finvx,type="l",xlab=expression(tau),ylab="", main="Quantile Function",lwd=2,col=col)
 		title(ylab=expression(paste("F"^"-1",(tau),sep="")), line=2.5, cex.lab=1)
-		par(mfrow=c(1,1))
 	}else if(type=="dis"){
 		plot(x,Fx,type="l",main="Distribution Function",ylab="f(x)",lwd=2,col=col)
 		abline(h=c(0,1),lty=2,col="gray")
