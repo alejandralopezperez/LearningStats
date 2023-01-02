@@ -17,6 +17,9 @@ plotFS(df1, df2, type = "b", col = "black")
 
 \item{col}{a single colour associated with the different representations; default to "black".}
 }
+\value{
+This function is called for the side effect of drawing the plot.
+}
 \description{
 \code{plotBeta} represents density, distribution and/or quantile functions associated with a F-Snedecor
  distribution with certain \code{df1} and \code{df2} degrees of freedom.

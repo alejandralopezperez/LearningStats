@@ -17,6 +17,9 @@ plotExp(lambda, type = "b", col = "black")
 
 \item{col}{a single colour associated with the different representations; default to "black".}
 }
+\value{
+This function is called for the side effect of drawing the plot.
+}
 \description{
 \code{plotExp} represents density, distribution and/or quantile functions associated with a Exponential
  distribution with certain parameter \code{lambda}.

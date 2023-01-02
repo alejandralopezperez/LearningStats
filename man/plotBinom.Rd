@@ -20,6 +20,8 @@ plotBinom(n, p, type = "b", col = "grey")
 \value{
 A matrix containing the probability mass and the distribution function associated with each point
 of the support of a Binomial distribution with parameters \code{n} and \code{p}.
+
+This function is called for the side effect of drawing the plot.
 }
 \description{
 \code{plotBinom} represents the probability mass and/or the distribution function associated with a Binomial

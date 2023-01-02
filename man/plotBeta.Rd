@@ -17,6 +17,9 @@ plotBeta(shape1, shape2, type = "b", col = "black")
 
 \item{col}{a single colour associated with the different representations; default to "black".}
 }
+\value{
+This function is called for the side effect of drawing the plot.
+}
 \description{
 \code{plotBeta} represents density, distribution and/or quantile functions associated with a Beta
  distribution with parameters \code{shape1} and \code{shape2}.

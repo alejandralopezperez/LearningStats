@@ -17,6 +17,9 @@ plotGamma(lambda, shape, type = "b", col = "black")
 
 \item{col}{a single colour associated with the different representations; default to "black".}
 }
+\value{
+This function is called for the side effect of drawing the plot.
+}
 \description{
 \code{plotGamma} represents density, distribution and/or quantile functions associated with a Gamma
  distribution with certain parameters \code{lambda} and  \code{shape}.

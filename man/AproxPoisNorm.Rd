@@ -25,6 +25,9 @@ AproxPoisNorm(lambda, legend = TRUE, xlab = "", ylab = "Probability",
 
 \item{lwd}{line width for the Normal density, a positive number; default to 2.}
 }
+\value{
+This function is called for the side effect of drawing the plot.
+}
 \description{
 When certain conditions are met (see Details), the Poisson distribution can be approximated by the Normal one. The function \code{AproxPoisNorm} illustrates this fact by plotting the mass diagram corresponding with the discrete distribution (parameter is given by the user) on which the associated Normal density function is also displayed.
 }

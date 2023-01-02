@@ -27,6 +27,9 @@ AproxBinomNorm(n, p, legend = TRUE, xlab = "", ylab = "Probability",
 
 \item{lwd}{line width for the Normal density, a positive number; default to 2.}
 }
+\value{
+This function is called for the side effect of drawing the plot.
+}
 \description{
 When certain conditions are met (see Details), the Binomial distribution can be approximated by the Normal one. The function \code{AproxBinomNorm} illustrates this fact by plotting the mass diagram corresponding with the discrete distribution (parameters are given by the user) on which the associated Normal density function is also displayed.
 }

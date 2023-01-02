@@ -23,6 +23,9 @@ AproxBinomPois(n, p, xlab = "x", ylab = "Probability Mass",
 
 \item{col2}{a single colour associated with the Poisson probability mass function; default to "red".}
 }
+\value{
+This function is called for the side effect of drawing the plot.
+}
 \description{
 \code{AproxBinomPois} represents the probability mass associated with a Binomial distribution with certain parameters \code{n} and \code{p} joint with the Poisson distribution with mean equal to \code{np}.
 Note that the Binomial distribution can be approximated by a Poisson distribution when certain conditions are met (see Details).

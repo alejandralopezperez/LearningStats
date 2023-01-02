@@ -17,6 +17,9 @@ plotChi(df, type = "b", col = "black")
 
 \item{col}{a single colour associated with the different representations; default to "black".}
 }
+\value{
+This function is called for the side effect of drawing the plot.
+}
 \description{
 \code{plotChi} represents density, distribution and/or quantile functions associated with a Chi-squared
  distribution with \code{df} degrees of freedom.

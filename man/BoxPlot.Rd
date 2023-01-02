@@ -18,6 +18,9 @@ BoxPlot(x, col = "white", main = "Boxplot representacion", ylab = "",
 
 \item{legend}{logical value; if TRUE (default), details about boxplot representation are given.}
 }
+\value{
+This function is called for the side effect of drawing the plot.
+}
 \description{
 The function \code{BoxPlot} displays a boxplot representation of a given sample.
 }
